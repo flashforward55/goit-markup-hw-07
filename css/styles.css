@@ -30,42 +30,6 @@ body {
     line-height: 1.14;
 }
 
-/* убираем точки списков */
-
-.list {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-/* убираем подчеркивание ссылок */
-
-.link {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* делаем активную страницу */
-
-.header-nav-link.link.current {
-    color: var(--accent-color);
-}
-
-/* скрываем заголовки h1 и h2 на странице*/
-
-.visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
-}
-
 /* глобальный сброс margin, padding */
 
 h1,
@@ -103,6 +67,42 @@ button {
     border: none;
 }
 
+/* убираем точки списков */
+
+.list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* убираем подчеркивание ссылок */
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* делаем активную страницу */
+
+.nav__item--current {
+    color: var(--accent-color);
+}
+
+/* скрываем заголовки h1 и h2 на странице*/
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
 /* общий класс .container для центрирования и ограничения контента по ширине */
 
 .container {
@@ -128,26 +128,43 @@ button {
     border-bottom: 1px solid var(--header-line-color);
 }
 
-.container.header-container {
+.header__container {
     display: flex;
     align-items: center;
 }
 
-.header-nav {
+.header__nav {
     display: flex;
     align-items: center;
 }
 
-.header-nav-items {
+.logo {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--accent-color);
+}
+
+.header__logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+.header__logo--black {
+    color: var(--secondary-black-color);
+}
+
+.nav {
     display: flex;
     margin-left: 93px;
 }
 
-.header-nav-item:not(:last-child) {
+.nav__item:not(:last-child) {
     margin-right: 50px;
 }
 
-.header-nav-item .header-nav-link {
+.nav__link {
     position: relative;
     display: block;
     padding-top: 32px;
@@ -160,12 +177,12 @@ button {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-nav-item .header-nav-link:hover,
-.header-nav-item .header-nav-link:focus {
+.nav__link:hover,
+.nav__link:focus {
     color: var(--accent-color);
 }
 
-.header-nav-item .header-nav-link.current::after {
+.nav__link--current::after {
     position: absolute;
     display: block;
     content: '';
@@ -179,41 +196,16 @@ button {
     background-color: var(--accent-color);
 }
 
-
-.heder-contact-items.list {
+.header-contact {
     display: flex;
     margin-left: auto;
 }
 
-.heder-contact-items .header-contact-item+.header-contact-item {
-    margin-left: 50px;
+.header-contact__item:not(:last-child) {
+    margin-right: 50px;
 }
 
-.header-logo,
-.footer-logo {
-    font-family: var(--secondary-font);
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
-    color: var(--accent-color);
-
-}
-
-.header-logo {
-    padding-top: 24px;
-    padding-bottom: 25px;
-}
-
-.header-logo-text {
-    color: var(--secondary-black-color);
-}
-
-.header-contact-link:hover,
-.header-contact-link:focus {
-    color: var(--accent-color);
-}
-
-.header-contact-link {
+.header-contact__link {
     display: inline-flex;
     align-items: center;
     font-weight: 500;
@@ -225,18 +217,25 @@ button {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-svg-envelope {
-    margin-right: 10px;
+.header-contact__link:hover,
+.header-contact__link:focus {
+    color: var(--accent-color);
+}
+
+.header-contact__envelope {
     width: 16px;
     height: 12px;
     fill: currentColor;
 }
 
-.header-svg-smartphone {
-    margin-right: 10px;
+.header-contact__smartphone {
     width: 10px;
     height: 16px;
     fill: currentColor;
+}
+
+.header-contact__icon--right {
+    margin-right: 10px;
 }
 
 
