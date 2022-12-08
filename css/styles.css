@@ -908,8 +908,8 @@ button {
 }
 
 .form-checkbox-link {
-    text-decoration-line: underline;
     color: var(--accent-color);
+    text-decoration-skip-ink: none;
 }
 
 .form-button {
