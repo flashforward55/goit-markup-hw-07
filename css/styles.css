@@ -340,7 +340,7 @@ button {
 
 /* --------------------------Section work--------------------------------- */
 
-.work-title,
+.work__title,
 .team-title,
 .clients-title {
     font-weight: 700;
@@ -350,19 +350,19 @@ button {
     margin-bottom: 50px;
 }
 
-.work-items,
+.work__items,
 .team-items {
     display: flex;
     margin-left: calc(-1 * var(--card-set-gap));
 }
 
-.work-item {
+.work__item {
     position: relative;
     flex-basis: calc(100% / 3 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
 }
 
-.work-item-subtitle {
+.work__subtitle {
     position: absolute;
     width: 100%;
     bottom: 0;
