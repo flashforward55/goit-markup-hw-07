@@ -341,7 +341,7 @@ button {
 /* --------------------------Section work--------------------------------- */
 
 .work__title,
-.team-title,
+.team__title,
 .clients-title {
     font-weight: 700;
     font-size: 36px;
@@ -351,7 +351,7 @@ button {
 }
 
 .work__items,
-.team-items {
+.team__items {
     display: flex;
     margin-left: calc(-1 * var(--card-set-gap));
 }
@@ -384,12 +384,15 @@ button {
     background-color: var(--secondary-bg-color);
 }
 
-.team-item {
+.team__item {
     flex-basis: calc((100% / 4) - var(--card-set-gap));
     margin-left: var(--card-set-gap);
+    background-color: var(--primary-white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
-.team-content {
+.team__content {
     padding-top: var(--card-set-gap);
     padding-bottom: var(--card-set-gap);
     padding-left: 32px;
@@ -398,34 +401,28 @@ button {
     line-height: 1.19;
 }
 
-.team-subtitle {
+.team__subtitle {
     font-weight: 500;
     margin-bottom: 10px;
     font-size: 16px;
 }
 
-.team-text {
+.team__text {
     color: var(--secondary-text-color);
     font-size: 16px;
     margin-bottom: 16px;
 }
 
-.team-item {
-    background-color: var(--primary-white-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-}
-
-.team-social-items {
+.team__social-items {
     display: flex;
     gap: var(--social-item-gap);
 }
 
-.team-social-item {
+.team__social-item {
     flex-basis: calc((100% - 3 * var(--social-item-gap)) / 4);
 }
 
-.team-social-link {
+.team__social-link {
     width: 44px;
     height: 44px;
     display: flex;
@@ -438,13 +435,13 @@ button {
         color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-social-link:hover,
-.team-social-link:focus {
+.team__social-link:hover,
+.team__social-link:focus {
     color: var(--primary-white-color);
     background-color: var(--accent-color);
 }
 
-.team-social-svg {
+.team__social-svg {
     width: 20px;
     height: 20px;
     fill: currentColor;
