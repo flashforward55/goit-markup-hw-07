@@ -761,13 +761,13 @@ button {
     transform: scale(2);
 }
 
-.svg-modal-close {
+.modal__svg {
     width: 18px;
     height: 18px;
     fill: currentColor;
 }
 
-.modal-close-btn {
+.modal__close {
     position: absolute;
     display: flex;
     align-items: center;
@@ -783,17 +783,17 @@ button {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:hover,
-.modal-close-btn:focus {
+.modal__close:hover,
+.modal__close:focus {
     color: var(--accent-color);
     cursor: pointer;
 }
 
-.form-input-container {
+.form__input-container {
     margin-bottom: 20px;
 }
 
-.form-title {
+.form__title {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
@@ -801,18 +801,18 @@ button {
     margin-bottom: 12px;
 }
 
-.form-field {
+.form__field {
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-.form-field:not(:last-child) {
+.form__field:not(:last-child) {
     margin-bottom: 10px;
 }
 
-.form-label,
-.comment {
+.form__label,
+.form__comment {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
@@ -820,8 +820,8 @@ button {
     margin-bottom: 4px;
 }
 
-.form-input,
-.comment {
+.form__input,
+.form__comment {
     width: 100%;
     padding-top: 11px;
     padding-bottom: 11px;
@@ -832,7 +832,7 @@ button {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.svg-form-input {
+.form__svg {
     width: 18px;
     height: 18px;
     position: absolute;
@@ -842,15 +842,15 @@ button {
 }
 
 
-.form-field:focus-within .form-input,
-.form-field:focus-within .svg-form-input,
-.form-field:focus-within .comment {
+.form__field:focus-within .form__input,
+.form__field:focus-within .form__svg,
+.form__field:focus-within .form__comment {
     fill: var(--accent-color);
     border-color: var(--accent-color);
     outline: none;
 }
 
-.comment {
+.form__comment {
     padding: 12px 16px;
     height: 120px;
     resize: none;
@@ -858,15 +858,15 @@ button {
     margin-bottom: 0;
 }
 
-.comment::placeholder {
+.form__comment::placeholder {
     color: rgba(117, 117, 117, 0.5);
 }
 
-.form-checkbox-container {
+.form__checkbox-container {
     margin-bottom: 30px;
 }
 
-.form-checkbox-label {
+.form__checkbox-label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -874,7 +874,7 @@ button {
     color: var(--secondary-text-color);
 }
 
-.form-checkbox-input {
+.form__checkbox {
     position: absolute;
     white-space: nowrap;
     width: 1px;
@@ -887,7 +887,7 @@ button {
     margin: -1px;
 }
 
-.svg-form-checkbox {
+.form__checkbox-svg {
     width: 16px;
     height: 15px;
     margin-right: 7px;
@@ -898,21 +898,21 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-checkbox-input:checked+.svg-form-checkbox {
+.form__checkbox:checked+.form__checkbox-svg {
     background-color: var(--accent-color);
     border-color: var(--accent-color);
 }
 
-.form-checkbox-container:focus-within .svg-form-checkbox {
+.form__checkbox-container:focus-within .form__checkbox-svg {
     border: 2px solid var(--accent-color);
 }
 
-.form-checkbox-link {
+.form__checkbox-link {
     color: var(--accent-color);
     text-decoration-skip-ink: none;
 }
 
-.form-button {
+.form__button {
     display: flex;
     align-items: center;
     text-align: center;
@@ -931,8 +931,8 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-button:focus,
-.form-button:hover {
+.form__button:focus,
+.form__button:hover {
     background-color: var(--button-active-color);
     cursor: pointer;
 }
