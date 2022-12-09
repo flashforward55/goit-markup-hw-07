@@ -609,17 +609,17 @@ button {
 
 /* ------------------------Section portfolio------------------------- */
 
-.filter-items {
+.portfolio-filter__items {
     display: flex;
     margin-bottom: 50px;
     justify-content: center;
 }
 
-.filter-item:not(:last-child) {
+.portfolio-filter__item:not(:last-child) {
     margin-right: 8px;
 }
 
-.filter-button {
+.portfolio-filter__button {
     display: inline-block;
     min-width: 73px;
     border: transparent;
@@ -639,8 +639,8 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-button:hover,
-.filter-button:focus {
+.portfolio-filter__button:hover,
+.portfolio-filter__button:focus {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -654,24 +654,24 @@ button {
 }
 
 /* ---------------------------cards-------------------------- */
-.card-content {
+.portfolio-card__content {
     padding: 20px 24px;
     border-right: 1px solid var(--bottom-border-card);
     border-bottom: 1px solid var(--bottom-border-card);
     border-left: 1px solid var(--bottom-border-card);
 }
 
-.cards-items {
+.portfolio-card__items {
     display: flex;
     flex-wrap: wrap;
     gap: var(--card-set-gap);
 }
 
-.card-item {
+.portfolio-card__item {
     flex-basis: calc((100% - 2 * var(--card-set-gap)) / 3);
 }
 
-.card-subtitle {
+.portfolio-card__subtitle {
     margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
@@ -680,27 +680,27 @@ button {
     color: var(--primary-text-color);
 }
 
-.card-text {
+.portfolio-card__text {
     font-size: 16px;
     line-height: 1.88;
     color: var(--secondary-text-color);
 }
 
-.card-link {
+.portfolio-card__link {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-link:hover,
-.card-link:focus {
+.portfolio-card__link:hover,
+.portfolio-card__link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.card-link-overlay {
+.portfolio-card__overlay {
     position: relative;
     overflow: hidden;
 }
 
-.card-link-text {
+.portfolio-card__text {
     position: absolute;
     width: 100%;
     top: 0;
@@ -716,8 +716,8 @@ button {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-link:hover .card-link-text,
-.card-link:focus .card-link-text {
+.portfolio-card__link:hover .portfolio-card__text,
+.portfolio-card__link:focus .portfolio-card__text {
     transform: translateY(0);
 }
 
