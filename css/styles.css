@@ -680,7 +680,7 @@ button {
     color: var(--primary-text-color);
 }
 
-.portfolio-card__text {
+.portfolio-card__description {
     font-size: 16px;
     line-height: 1.88;
     color: var(--secondary-text-color);
