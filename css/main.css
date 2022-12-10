@@ -31,6 +31,7 @@ img {
   height: auto;
 }
 
+/* убираем пподчеркивание у ссылок */
 a {
   display: inline-block;
 }
@@ -44,20 +45,15 @@ button {
   border: none;
 }
 
-/* убираем точки списков */
-.portfolio-card__items, .portfolio-filter__items, .footer__social-items, .footer__items, .clients__items, .team__social-items, .team__items, .work__items, .scills__items, .header-contact, .nav {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
+/* общий класс .container для центрирования и ограничения контента по ширине */
+.container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* убираем подчеркивание ссылок */
-.logo, a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* делаем активную страницу */
 /* скрываем заголовки h1 и h2 на странице*/
 .visually-hidden {
   position: absolute;
@@ -73,23 +69,27 @@ button {
   margin: -1px;
 }
 
-/* общий класс .container для центрирования и ограничения контента по ширине */
-.container {
-  max-width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+/* убираем точки списков */
+.portfolio-card__items, .portfolio-filter__items, .footer__social-items, .footer__items, .clients__items, .team__social-items, .team__items, .work__items, .scills__items, .header-contact, .nav {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
-.section {
+/* убираем подчеркивание ссылок */
+.logo, a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* делаем одинаковое рассточние между секциями */
+.portfolio-filter, .clients, .team, .work, .scills {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.work__title,
-.team__title,
-.clients__title {
+/* заголоки h2 на главной странице */
+.clients__title, .team__title, .work__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;

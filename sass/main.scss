@@ -1,56 +1,7 @@
 @import './utils/variables';
 @import './utils/reset';
+@import './utils/base';
 @import './utils/placeholders';
-
-
-
-
-/* делаем активную страницу */
-
-
-
-/* скрываем заголовки h1 и h2 на странице*/
-
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
-
-/* общий класс .container для центрирования и ограничения контента по ширине */
-
-.container {
-  max-width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.work__title,
-.team__title,
-.clients__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-
-
 
 
 /* $$$$$$$$$$$Header$$$$$$$$$$$$$$ */
@@ -235,6 +186,7 @@
 /* $$$$$$$$$$$-Section scills$$$$$$$$$$$$$$ */
 
 .scills{
+    @extend %section;
     &__items {
         @extend %list;
         display: flex;
@@ -270,13 +222,18 @@
 /* $$$$$$$$$$$$$Section work$$$$$$$$$$$$$$$$- */
 
 .work{
+    @extend %section;
     padding-top: 0;
 
+    &__title{
+        @extend %title__potrfolio;
+    }
+
     &__items {
-            @extend %list;
-            display: flex;
-            margin-left: calc(-1 * $card-set-gap);
-        }
+        @extend %list;
+        display: flex;
+        margin-left: calc(-1 * $card-set-gap);
+    }
 
     &__item {
             position: relative;
@@ -304,7 +261,12 @@
 /* $$$$$$$$$$$$-Section team$$$$$$$$$$$$$$$- */
 
 .team {
-  background-color: $secondary-bg-color;
+    @extend %section;
+    background-color: $secondary-bg-color;
+
+    &__title {
+            @extend %title__potrfolio;
+        }
 
     &__items {
             @extend %list;
@@ -371,6 +333,11 @@
 }
 /* $$$$$$$$$$$$$$-Sections clients$$$$$$$$$$$$$ */
 .clients{
+    @extend %section;
+
+    &__title {
+            @extend %title__potrfolio;
+        }
     &__items {
         @extend %list;
         display: flex;
@@ -600,6 +567,7 @@
 /* $$$$$$$$$$$$Section portfolio$$$$$$$$$$$$- */
 
 .portfolio-filter{
+    @extend %section;
     &__items {
         @extend %list;
         display: flex;

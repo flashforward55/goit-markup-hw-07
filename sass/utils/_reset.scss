@@ -32,12 +32,15 @@ img {
   height: auto;
 }
 
+/* убираем пподчеркивание у ссылок */
+
 a {
   display: inline-block;
   @extend %link;
 }
 
 /* Свойства для обнуления курсива у address */
+
 address {
   font-style: normal;
 }
@@ -45,3 +48,4 @@ address {
 button {
   border: none;
 }
+
