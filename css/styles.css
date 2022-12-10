@@ -308,7 +308,7 @@ button {
     gap: var(--card-set-gap);
 }
 
-.sscills__item {
+.scills__item {
     flex-basis: calc((100% - 3 * var(--card-set-gap)) / 4);
 }
 
