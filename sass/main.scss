@@ -3,12 +3,7 @@
 @import './utils/placeholders';
 
 
-/* убираем подчеркивание ссылок */
 
-.link {
-  text-decoration: none;
-  color: inherit;
-}
 
 /* делаем активную страницу */
 
@@ -84,6 +79,7 @@
 }
 
 .logo {
+    @extend %link;
     font-family: $secondary-font;
     font-weight: 700;
     font-size: 26px;
@@ -899,6 +895,7 @@
     &__checkbox-link {
             color: $accent-color;
             text-decoration-skip-ink: none;
+            text-decoration: underline;
         }
 
     &__button {

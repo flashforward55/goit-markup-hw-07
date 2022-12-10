@@ -52,7 +52,7 @@ button {
 }
 
 /* убираем подчеркивание ссылок */
-.link {
+.logo, a {
   text-decoration: none;
   color: inherit;
 }
@@ -999,6 +999,7 @@ button {
   color: #2196F3;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+  text-decoration: underline;
 }
 .form__button {
   display: -webkit-box;
