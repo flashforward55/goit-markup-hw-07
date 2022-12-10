@@ -450,39 +450,36 @@ button {
         }
 }
 /* $$$$$$$$$$$$$$-Sections clients$$$$$$$$$$$$$ */
+.clients{
+    &__items {
+      display: flex;
+      gap: $card-set-gap;
+    }
+    &__item {
+          flex-basis: calc(100% - 5 * $card-set-gap) / 6;
+        }
+    &__link {
+            display: flex;
+            height: 92px;
+            width: 170px;
+            align-items: center;
+            justify-content: center;
+            color: $social-team-color;
+            border: 1px solid $social-team-color;
+            border-radius: 4px;
+            padding: 16px 32px;
+    
+            transition: border-color $transition-cubic-time $transition-cubic, color $transition-cubic-time $transition-cubic;
 
-.clients__items {
-  display: flex;
-  gap: $card-set-gap;
-}
-
-.clients__item {
-  flex-basis: calc(100% - 5 * $card-set-gap) / 6;
-}
-
-.clients__link {
-  display: flex;
-  height: 92px;
-  width: 170px;
-  align-items: center;
-  justify-content: center;
-  color: $social-team-color;
-  border: 1px solid $social-team-color;
-  border-radius: 4px;
-  padding: 16px 32px;
-
-  transition: border-color $transition-cubic-time $transition-cubic, color $transition-cubic-time $transition-cubic;
-}
-
-.clients__link:hover,
-.clients__link:focus {
-  color: $accent-color;
-  border-color: $accent-color;
-
-}
-
-.clients__svg {
-  fill: currentColor;
+            &:hover,
+            &:focus {
+                color: $accent-color;
+                border-color: $accent-color;         
+                }
+        }
+        &__svg {
+            fill: currentColor;
+                }
 }
 
 .company-1 {
@@ -524,9 +521,6 @@ button {
   color: $primary-white-color;
 }
 
-.footer__logo {
-  margin-bottom: 20px;
-}
 
 .footer__logo--white {
   color: $primary-white-color;

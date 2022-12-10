@@ -419,12 +419,10 @@ button {
   display: flex;
   gap: 30px;
 }
-
 .clients__item {
   -ms-flex-preferred-size: calc(100% - 150px)/6;
       flex-basis: calc(100% - 150px)/6;
 }
-
 .clients__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -444,13 +442,10 @@ button {
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.clients__link:hover,
-.clients__link:focus {
+.clients__link:hover, .clients__link:focus {
   color: #2196F3;
   border-color: #2196F3;
 }
-
 .clients__svg {
   fill: currentColor;
 }
@@ -491,10 +486,6 @@ button {
   padding-bottom: 60px;
   background-color: #2F303A;
   color: #ffffff;
-}
-
-.footer__logo {
-  margin-bottom: 20px;
 }
 
 .footer__logo--white {
