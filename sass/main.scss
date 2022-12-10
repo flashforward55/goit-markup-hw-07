@@ -515,139 +515,142 @@ button {
 /* $$$$$$$$$$$$$$$Footer$$$$$$$$$$$$$$$$$ */
 
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: $footer-bg-color;
-  color: $primary-white-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $footer-bg-color;
+    color: $primary-white-color;
+
+    &__logo {
+            margin-bottom: 20px;
+
+            &--white {
+                    color: $primary-white-color;
+                }
+        }
+    &__link {
+            font-style: normal;
+            line-height: 1.71;
+            color: $footer-contact-color;
+    
+            transition: color $transition-cubic-time $transition-cubic;
+
+            &--white {
+                    color: $primary-white-color;
+                }
+            &:hover,
+            &:focus {
+                    color: $accent-color;
+                }
+        }
+    &__item:not(:last-child) {
+            margin-bottom: 9px;
+        }
+
+    &__flex {
+            display: flex;
+            align-items: baseline;
+        }
+
+    &__social {
+            display: flex;
+            flex-direction: column;
+        }
+
+    &__contacts {
+            margin-right: 70px;
+        }
+    
+    &__social-items {
+            display: flex;
+            gap: 10px;
+        }
+    &__social-item {
+            flex-basis: calc((100% - 3 * $social-item-gap)) / 4;
+        }
+    &__social-link {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: $primary-white-color;
+    
+            transition: background-color $transition-cubic-time $transition-cubic, color $transition-cubic-time $transition-cubic;
+
+            &:hover,
+            &:focus {
+                    color: $primary-white-color;
+                    background-color: $accent-color;
+                }
+        }
+    &__social-svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+    &__subtitle {
+            font-size: inherit;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $primary-white-color;
+            margin-bottom: 20px;
+        }
 }
 
 
-.footer__logo--white {
-  color: $primary-white-color;
-}
-
-.footer__link {
-  font-style: normal;
-  line-height: 1.71;
-  color: $footer-contact-color;
-
-  transition: color $transition-cubic-time $transition-cubic;
-}
-
-.footer__item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.footer__link--white {
-  color: $primary-white-color;
-}
-
-.footer__link:hover,
-.footer__link:focus {
-  color: $accent-color;
-}
-
-.footer__flex {
-  display: flex;
-  align-items: baseline;
-}
-
-.footer__social {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer__contacts {
-  margin-right: 70px;
-}
-
-.footer__social-items {
-  display: flex;
-  gap: 10px;
-}
-
-.footer__social-item {
-  flex-basis: calc((100% - 3 * $social-item-gap)) / 4;
-}
-
-.footer__social-link {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: $primary-white-color;
-
-  transition: background-color $transition-cubic-time $transition-cubic, color $transition-cubic-time $transition-cubic;
-}
-
-.footer__social-link:hover,
-.footer__social-link:focus {
-  color: $primary-white-color;
-  background-color: $accent-color;
-}
-
-.footer__social-svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
-.footer__subtitle {
-  font-size: inherit;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: $primary-white-color;
-  margin-bottom: 20px;
-}
 
 /* $$$$$$$$$$$$Section portfolio$$$$$$$$$$$$- */
 
-.portfolio-filter__items {
-  display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+.portfolio-filter{
+    &__items {
+        display: flex;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    &__button {
+        display: inline-block;
+        min-width: 73px;
+        border: transparent;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 22px;
+        padding-right: 22px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.62;
+        text-align: center;
+        letter-spacing: 0.03em;
+        border-radius: 4px;
+        background-color: $secondary-bg-color;
+        color: $primary-text-color;
+
+        transition: background-color $transition-cubic-time $transition-cubic, color $transition-cubic-time $transition-cubic, box-shadow $transition-cubic-time $transition-cubic;
+
+        &:hover,
+        &:focus {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.62;
+            text-align: center;
+            letter-spacing: 0.03em;
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: $accent-color;
+            color: $primary-white-color;
+            }
+    }
 }
 
-.portfolio-filter__item:not(:last-child) {
-  margin-right: 8px;
-}
 
-.portfolio-filter__button {
-  display: inline-block;
-  min-width: 73px;
-  border: transparent;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 22px;
-  padding-right: 22px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  text-align: center;
-  letter-spacing: 0.03em;
-  border-radius: 4px;
-  background-color: $secondary-bg-color;
-  color: $primary-text-color;
 
-  transition: background-color $transition-cubic-time $transition-cubic, color $transition-cubic-time $transition-cubic, box-shadow $transition-cubic-time $transition-cubic;
-}
-
-.portfolio-filter__button:hover,
-.portfolio-filter__button:focus {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  text-align: center;
-  letter-spacing: 0.03em;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: $accent-color;
-  color: $primary-white-color;
-}
 
 /* $$$$$$$$$$$$$-cards$$$$$$$$$$$$$ */
 .portfolio-card__content {
