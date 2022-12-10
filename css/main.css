@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* General styles */
 body {
   background-color: #ffffff;
   color: #212121;
@@ -46,7 +45,7 @@ button {
 }
 
 /* убираем точки списков */
-.list {
+.portfolio-card__items, .portfolio-filter__items, .footer__social-items, .footer__items, .clients__items, .team__social-items, .team__items, .work__items, .scills__items, .header-contact, .nav {
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -59,10 +58,6 @@ button {
 }
 
 /* делаем активную страницу */
-.nav__item--current {
-  color: #2196F3;
-}
-
 /* скрываем заголовки h1 и h2 на странице*/
 .visually-hidden {
   position: absolute;
@@ -92,8 +87,14 @@ button {
   padding-bottom: 94px;
 }
 
-.work {
-  padding-top: 0;
+.work__title,
+.team__title,
+.clients__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 /* $$$$$$$$$$$Header$$$$$$$$$$$$$$ */
@@ -137,6 +138,9 @@ button {
   display: -ms-flexbox;
   display: flex;
   margin-left: 93px;
+}
+.nav__item--current {
+  color: #2196F3;
 }
 .nav__item:not(:last-child) {
   margin-right: 50px;
@@ -306,24 +310,15 @@ button {
 }
 
 /* $$$$$$$$$$$$$Section work$$$$$$$$$$$$$$$$- */
-.work__title,
-.team__title,
-.clients__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  margin-bottom: 50px;
+.work {
+  padding-top: 0;
 }
-
-.work__items,
-.team__items {
+.work__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-left: -30px;
 }
-
 .work__item {
   position: relative;
   -ms-flex-preferred-size: calc(33.3333333333% - 30px);
@@ -347,6 +342,12 @@ button {
 /* $$$$$$$$$$$$-Section team$$$$$$$$$$$$$$$- */
 .team {
   background-color: #F5F4FA;
+}
+.team__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -30px;
 }
 .team__item {
   -ms-flex-preferred-size: calc(25% - 30px);
@@ -926,26 +927,26 @@ button {
   border-color: #2196F3;
   outline: none;
 }
-.form__comment {
+.form__comment--decor {
   padding: 12px 16px;
   height: 120px;
   resize: none;
   color: inherit;
   margin-bottom: 0;
 }
-.form__comment::-webkit-input-placeholder {
+.form__comment--decor::-webkit-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.form__comment::-moz-placeholder {
+.form__comment--decor::-moz-placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.form__comment:-ms-input-placeholder {
+.form__comment--decor:-ms-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.form__comment::-ms-input-placeholder {
+.form__comment--decor::-ms-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.form__comment::placeholder {
+.form__comment--decor::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 .form__checkbox-container {

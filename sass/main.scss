@@ -1,82 +1,7 @@
-/* General styles */
+@import './utils/variables';
+@import './utils/reset';
+@import './utils/placeholders';
 
-  $primary-text-color: #212121;
-  $secondary-text-color: #757575;
-  $primary-white-color: #ffffff;
-  $secondary-black-color: #000000;
-  $accent-color: #2196F3;
-  $button-active-color: #188CE8;
-  $footer-bg-color: #2F303A;
-  $footer-contact-color: rgba(255, 255, 255, 0.6);
-  $work-subtitle-color: rgba(47, 48, 58, 0.8);
-  $secondary-bg-color: #F5F4FA;
-  $header-line-color: #ECECEC;
-  $bottom-border-card: #EEEEEE;
-  $social-team-color: #AFB1B8;
-  $hero-overlay-color: #C4C4C4;
-  $main-font: 'Roboto', sans-serif;
-  $secondary-font: 'Raleway', sans-serif;
-  $card-set-gap: 30px;
-  $social-item-gap: 10px;
-  $transition-cubic: cubic-bezier(0.4, 0, 0.2, 1);
-  $transition-cubic-time: 250ms;
-
-
-
-body {
-  background-color: $primary-white-color;
-  color: $primary-text-color;
-  font-family: $main-font;
-
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  line-height: 1.14;
-}
-
-/* глобальный сброс margin, padding */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-a,
-img,
-button,
-input {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  display: inline-block;
-}
-
-/* Свойства для обнуления курсива у address */
-address {
-  font-style: normal;
-}
-
-button {
-  border: none;
-}
-
-/* убираем точки списков */
-
-.list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
 
 /* убираем подчеркивание ссылок */
 
@@ -87,9 +12,7 @@ button {
 
 /* делаем активную страницу */
 
-.nav__item--current {
-  color: $accent-color;
-}
+
 
 /* скрываем заголовки h1 и h2 на странице*/
 
@@ -121,9 +44,19 @@ button {
   padding-bottom: 94px;
 }
 
-.work {
-  padding-top: 0;
+.work__title,
+.team__title,
+.clients__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
 }
+
+
+
+
 
 /* $$$$$$$$$$$Header$$$$$$$$$$$$$$ */
 
@@ -135,34 +68,19 @@ button {
         align-items: center;
        }
 
-           // .header__container {
-           //   display: flex;
-           //   align-items: center;
-           // }
-
     &__nav {
        display: flex;
        align-items: center;
       }
-          // .header__nav {
-          //   display: flex;
-          //   align-items: center;
-          // }
+
     &__logo {
         padding-top: 24px;
         padding-bottom: 25px;
-    }
-        // .header__logo {
-        //   padding-top: 24px;
-        //   padding-bottom: 25px;
-        // }
 
-    &__logo--black {
-        color: $secondary-black-color;
-        }
-                // .header__logo--black {
-                //   color: $secondary-black-color;
-                // }
+        &--black {
+                color: $secondary-black-color;
+            }
+    }
 }
 
 .logo {
@@ -174,15 +92,19 @@ button {
 }
 
 .nav {
+    @extend %list;
     display: flex;
     margin-left: 93px;
 
+    &__item--current {
+            color: $accent-color;
+        }
+
     &__item:not(:last-child) {
         margin-right: 50px;
+
         }
-                // .nav__item:not(:last-child) {
-                //   margin-right: 50px;
-                // }
+
     &__link {
         position: relative;
         display: block;
@@ -215,8 +137,9 @@ button {
 }
 
 .header-contact {
-  display: flex;
-  margin-left: auto;
+    @extend %list;
+    display: flex;
+    margin-left: auto;
     &__item:not(:last-child) {
             margin-right: 50px;
         }
@@ -249,25 +172,26 @@ button {
     &__icon--right {
             margin-right: 10px;
         }
+    
 }
 
 /* $$$$$$$$$$$$$$Section hero$$$$$$$$$$$$$- */
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  text-align: center;
-  background-color: $hero-overlay-color;
-  color: $primary-white-color;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    background-color: $hero-overlay-color;
+    color: $primary-white-color;
 
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
 
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     &__title {
             margin-bottom: 30px;
@@ -316,8 +240,9 @@ button {
 
 .scills{
     &__items {
-            display: flex;
-            gap: $card-set-gap;
+        @extend %list;
+        display: flex;
+        gap: $card-set-gap;
         }
     &__item {
             flex-basis: calc(100% - 3 * $card-set-gap) / 4;
@@ -348,23 +273,15 @@ button {
 
 /* $$$$$$$$$$$$$Section work$$$$$$$$$$$$$$$$- */
 
-.work__title,
-.team__title,
-.clients__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.work__items,
-.team__items {
-  display: flex;
-  margin-left: calc(-1 * $card-set-gap);
-}
-
 .work{
+    padding-top: 0;
+
+    &__items {
+            @extend %list;
+            display: flex;
+            margin-left: calc(-1 * $card-set-gap);
+        }
+
     &__item {
             position: relative;
             flex-basis: calc(100% / 3 - $card-set-gap);
@@ -393,8 +310,14 @@ button {
 .team {
   background-color: $secondary-bg-color;
 
+    &__items {
+            @extend %list;
+            display: flex;
+            margin-left: calc(-1 * $card-set-gap);
+        }
+
     &__item {
-        flex-basis: calc((100% / 4) - $card-set-gap);
+        flex-basis: calc(100% / 4 - $card-set-gap);
         margin-left: $card-set-gap;
         background-color: $primary-white-color;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -419,11 +342,12 @@ button {
             margin-bottom: 16px;
         }
         &__social-items {
+            @extend %list;
             display: flex;
             gap: $social-item-gap;
         }
         &__social-item {
-            flex-basis: calc((100% - 3 * $social-item-gap)) / 4;
+            flex-basis: calc(100% - 3 * $social-item-gap) / 4;
         }
         &__social-link {
             width: 44px;
@@ -452,8 +376,9 @@ button {
 /* $$$$$$$$$$$$$$-Sections clients$$$$$$$$$$$$$ */
 .clients{
     &__items {
-      display: flex;
-      gap: $card-set-gap;
+        @extend %list;
+        display: flex;
+        gap: $card-set-gap;
     }
     &__item {
           flex-basis: calc(100% - 5 * $card-set-gap) / 6;
@@ -520,6 +445,10 @@ button {
     background-color: $footer-bg-color;
     color: $primary-white-color;
 
+    &__items{
+        @extend %list;
+    }
+
     &__logo {
             margin-bottom: 20px;
 
@@ -561,11 +490,12 @@ button {
         }
     
     &__social-items {
+            @extend %list;
             display: flex;
             gap: 10px;
         }
     &__social-item {
-            flex-basis: calc((100% - 3 * $social-item-gap)) / 4;
+            flex-basis: calc(100% - 3 * $social-item-gap) / 4;
         }
     &__social-link {
             width: 44px;
@@ -675,6 +605,7 @@ button {
 
 .portfolio-filter{
     &__items {
+        @extend %list;
         display: flex;
         margin-bottom: 50px;
         justify-content: center;
@@ -729,12 +660,13 @@ button {
     }
 
     &__items {
+        @extend %list;
         display: flex;
         flex-wrap: wrap;
         gap: $card-set-gap;
     }
     &__item {
-        flex-basis: calc((100% - 2 * $card-set-gap)) / 3;
+        flex-basis: calc(100% - 2 * $card-set-gap) / 3;
     }
 
     &__subtitle {
@@ -911,7 +843,7 @@ button {
            outline: none;
            }
     }
-    &__comment {
+    &__comment--decor {
           padding: 12px 16px;
           height: 120px;
           resize: none;
