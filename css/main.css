@@ -99,6 +99,7 @@ button {
   margin: -1px;
 }
 
+/* центрируем flex элементы */
 .form__button, .form__checkbox-label, .modal__close, .backdrop, .footer__form-button, .footer__social-link, .team__social-link {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -21,7 +21,7 @@
     line-height: 1.71;
     color: $footer-contact-color;
 
-    transition: color $transition-cubic-time $transition-cubic;
+    transition: color $time $transition-cubic;
 
     &--white {
       color: $primary-white-color;
@@ -69,8 +69,8 @@
     background-color: rgba(255, 255, 255, 0.1);
     color: $primary-white-color;
 
-    transition: background-color $transition-cubic-time $transition-cubic,
-      color $transition-cubic-time $transition-cubic;
+    transition: background-color $time $transition-cubic,
+      color $time $transition-cubic;
 
     &:hover,
     &:focus {
@@ -122,7 +122,7 @@
     color: $hero-overlay-color;
     background-color: $footer-bg-color;
 
-    transition: border-color $transition-cubic-time $transition-cubic;
+    transition: border-color $time $transition-cubic;
 
     &::placeholder {
       font-size: 16px;
@@ -150,7 +150,7 @@
     color: $primary-white-color;
     background-color: $accent-color;
 
-    transition: background-color $transition-cubic-time $transition-cubic;
+    transition: background-color $time $transition-cubic;
 
     &:hover,
     &:focus {

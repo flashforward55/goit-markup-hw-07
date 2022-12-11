@@ -47,7 +47,7 @@
     letter-spacing: 0.06em;
     color: $primary-white-color;
 
-    transition: background-color $transition-cubic-time $transition-cubic;
+    transition: background-color $time $transition-cubic;
 
     &:hover,
     &:focus {

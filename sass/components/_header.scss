@@ -53,7 +53,7 @@
     letter-spacing: 0.02em;
     color: inherit;
 
-    transition: color $transition-cubic-time $transition-cubic;
+    transition: color $time $transition-cubic;
 
     &:hover,
     &:focus {
@@ -94,7 +94,7 @@
     padding-top: 32px;
     padding-bottom: 32px;
 
-    transition: color $transition-cubic-time $transition-cubic;
+    transition: color $time $transition-cubic;
 
     &:hover,
     &:focus {

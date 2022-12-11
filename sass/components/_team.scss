@@ -59,8 +59,8 @@
     border-radius: 50%;
     color: $social-team-color;
 
-    transition: background-color $transition-cubic-time $transition-cubic,
-      color $transition-cubic-time $transition-cubic;
+    transition: background-color $time $transition-cubic,
+      color $time $transition-cubic;
 
     &:hover,
     &:focus {

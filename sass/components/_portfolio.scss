@@ -31,9 +31,9 @@
     background-color: $secondary-bg-color;
     color: $primary-text-color;
 
-    transition: background-color $transition-cubic-time $transition-cubic,
-      color $transition-cubic-time $transition-cubic,
-      box-shadow $transition-cubic-time $transition-cubic;
+    transition: background-color $time $transition-cubic,
+      color $time $transition-cubic,
+      box-shadow $time $transition-cubic;
 
     &:hover,
     &:focus {
@@ -89,7 +89,7 @@
   }
 
   &__link {
-    transition: box-shadow $transition-cubic-time $transition-cubic;
+    transition: box-shadow $time $transition-cubic;
 
     &:hover,
     &:focus {
@@ -116,7 +116,7 @@
     color: $primary-white-color;
 
     transform: translateY(100%);
-    transition: transform $transition-cubic-time $transition-cubic;
+    transition: transform $time $transition-cubic;
 
     .portfolio-card__link:hover &,
     .portfolio-card__link:focus & {
