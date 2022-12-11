@@ -56,6 +56,15 @@ button {
 }
 
 /* скрываем заголовки h1 и h2 на странице*/
+/* логотип */
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: #2196F3;
+}
+
 /* убираем точки списков */
 .portfolio-card__items, .portfolio-filter__items, .footer__social-items, .footer__items, .clients__items, .team__social-items, .team__items, .work__items, .scills__items, .header-contact, .nav {
   list-style: none;
@@ -64,9 +73,8 @@ button {
 }
 
 /* убираем подчеркивание ссылок */
-.logo, a {
+a, .logo {
   text-decoration: none;
-  color: inherit;
 }
 
 /* делаем одинаковое рассточние между секциями */
@@ -138,14 +146,6 @@ button {
 }
 .header__logo--black {
   color: #000000;
-}
-
-.logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  color: #2196F3;
 }
 
 .nav {
