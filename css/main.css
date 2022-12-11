@@ -424,13 +424,13 @@ a, .logo {
 .clients__item {
   -ms-flex-preferred-size: calc(100% - 150px)/6;
       flex-basis: calc(100% - 150px)/6;
+  width: 100%;
 }
 .clients__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 92px;
-  width: 170px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
