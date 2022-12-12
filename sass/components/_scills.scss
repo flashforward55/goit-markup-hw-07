@@ -9,6 +9,7 @@
 
   &__item {
     flex-basis: calc(100% - 3 * $card-set-gap) / 4;
+    width: 100%;
   }
 
   &__subtitle {

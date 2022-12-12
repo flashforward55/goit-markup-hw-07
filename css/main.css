@@ -292,6 +292,7 @@ a, .logo {
 .scills__item {
   -ms-flex-preferred-size: calc(100% - 90px)/4;
       flex-basis: calc(100% - 90px)/4;
+  width: 100%;
 }
 .scills__subtitle {
   margin-bottom: 10px;
