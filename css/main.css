@@ -394,8 +394,8 @@ a, .logo {
   gap: 10px;
 }
 .team__social-item {
-  -ms-flex-preferred-size: calc(100% - 30px)/4;
-      flex-basis: calc(100% - 30px)/4;
+  -ms-flex-preferred-size: calc((100% - 30px) / 4);
+      flex-basis: calc((100% - 30px) / 4);
 }
 .team__social-link {
   width: 44px;
