@@ -58,7 +58,7 @@
   }
 
   &__social-item {
-    flex-basis: calc(100% - 3 * $social-item-gap) / 4;
+    flex-basis: calc((100% - 3 * $social-item-gap) / 4);
   }
 
   &__social-link {

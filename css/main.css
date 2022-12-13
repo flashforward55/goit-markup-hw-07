@@ -290,9 +290,8 @@ a, .logo {
   gap: 30px;
 }
 .scills__item {
-  -ms-flex-preferred-size: calc(100% - 90px)/4;
-      flex-basis: calc(100% - 90px)/4;
-  width: 100%;
+  -ms-flex-preferred-size: calc((100% - 90px) / 4);
+      flex-basis: calc((100% - 90px) / 4);
 }
 .scills__subtitle {
   margin-bottom: 10px;
@@ -423,9 +422,8 @@ a, .logo {
   gap: 30px;
 }
 .clients__item {
-  -ms-flex-preferred-size: calc(100% - 150px)/6;
-      flex-basis: calc(100% - 150px)/6;
-  width: 100%;
+  -ms-flex-preferred-size: calc((100% - 150px) / 6);
+      flex-basis: calc((100% - 150px) / 6);
 }
 .clients__link {
   display: -webkit-box;
@@ -538,8 +536,8 @@ a, .logo {
   gap: 10px;
 }
 .footer__social-item {
-  -ms-flex-preferred-size: calc(100% - 30px)/4;
-      flex-basis: calc(100% - 30px)/4;
+  -ms-flex-preferred-size: calc((100% - 30px) / 4);
+      flex-basis: calc((100% - 30px) / 4);
 }
 .footer__social-link {
   width: 44px;
@@ -723,8 +721,8 @@ a, .logo {
   gap: 30px;
 }
 .portfolio-card__item {
-  -ms-flex-preferred-size: calc(100% - 60px)/3;
-      flex-basis: calc(100% - 60px)/3;
+  -ms-flex-preferred-size: calc((100% - 60px) / 3);
+      flex-basis: calc((100% - 60px) / 3);
 }
 .portfolio-card__subtitle {
   margin-bottom: 4px;

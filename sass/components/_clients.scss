@@ -12,8 +12,7 @@
   }
 
   &__item {
-    flex-basis: calc(100% - 5 * $card-set-gap) / 6;
-    width: 100%;
+    flex-basis: calc((100% - 5 * $card-set-gap) / 6);
   }
 
   &__link {
